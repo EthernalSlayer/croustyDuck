@@ -10,60 +10,67 @@
     <header>
 
     </header>
-
-    <main>
-        <aside id="menu">
-            <ul class="list">
-                <li><a>FILTER BY</a></li>
-                <li><a>Disponibilities </a>
-                    <ul>
-                        <li><a>Next two weeks</a></li>
-                        <li><a>In the month</a></li>
-                        <li><a>Next 3 months</a></li>
-                        <li><a>Later</a></li>
-                    </ul>
-                </li>
-                <li><a>Type of medical consultation</a>
-                    <ul>
-                        <li><a>Implants</a></li>
-                        <li><a>Tooth-Whitening</a></li>
-                        <li><a>Dentistry</a></li>
-                    </ul>
-                </li>
-                <li><a>Languages</a>
+    <aside id="menu">
+        <ul class="list">
+            <li><a>FILTER BY</a></li>
+            <li><a>Disponibilities </a>
                 <ul>
-                    <li><a>French</a></li>
-                    <li><a>English</a></li>
-                    <li><a>Spanish</a></li>
-                    <li><a>Others</a></li>
-                </ul></li> 
-            </ul>
-        </aside>
-        <div id='containPractician'>
+                    <li><a>Next two weeks</a></li>
+                    <li><a>In the month</a></li>
+                    <li><a>Next 3 months</a></li>
+                    <li><a>Later</a></li>
+                </ul>
+            </li>
+            <li><a>Type of medical consultation</a>
+                <ul>
+                    <li><a>Implants</a></li>
+                    <li><a>Tooth-Whitening</a></li>
+                    <li><a>Dentistry</a></li>
+                </ul>
+            </li>
+            <li><a>Languages</a>
+            <ul>
+                <li><a>French</a></li>
+                <li><a>English</a></li>
+                <li><a>Spanish</a></li>
+                <li><a>Others</a></li>
+            </ul></li> 
+        </ul>
+    </aside>
+    <main>
+        <section id='containPractician' class="sectionContainer">
             <div class="container">
-
-
-            <h3>{clinic}</h3>
-            <img src="{img_clinique}" alt="photo {clinic}" title="photo {clinic}">
-            
-            <div> {continent} - {country} - {city} </div>
-            <div>{name_practician}</div>
-            <div>{speciality_practician}</div>
-            <div id="modal_{id}">
-                <div>Plus de détails... {clinic} </div>
+                <div class="clinicContainer">
+                    <h3>{clinic}</h3>
+                    <img src="{img_clinique}" alt="photo {clinic}" title="photo {clinic}">
+                </div>
+                <div class="infoContainer">
+                    <div> {continent} - {country} - {city} </div>
+                    <div>{name_practician}</div>
+                    <div>{speciality_practician}</div>
+                    <!--<div id="modal_{id}">-->
+                    <button type="button" class="openButton" onclick="openModal(modal_{id})"><div>Plus de détails... {clinic} </div></button>
+                </div>
             </div>
 
             <br/>
-
-            </h1>
-     
-
+            <div class="modal" id="modal_{id}">
+                <h3>{operations}</h3>
+                <img src="{img_clinique}" alt="photo {clinic}">
+                <h4>{clinic}</h4>
+                <p>{description_clinic}</p>
+                <p>{continent}</p>
+                <p>{country}</p>
+                <p>{city}</p>
+                <iframe src="{map_clinique}" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <h4>{name_practician}</h4>
+                <img src="{img_practician}" alt="practician photo">
+                <p>{speciality_practician}</p>
+                <p>{package}</p>
+                <button type="button" class="closeButton" onclick="closeModal(modal_{id})">close</button>
             </div>
-
-        </div>
-
+        </section>
     </main>
-
     <footer>
 
 

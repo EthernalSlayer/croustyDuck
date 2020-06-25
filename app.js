@@ -8,11 +8,11 @@
             country:'Paraguay',
             continent:'Latina America',
             img_clinique:'https://www.lasource.ch/sites/default/files/styles/crop_3_2/public/images/content_types/page/specialites.jpg?itok=1eShRFbt',
-            map_clinique:'',
+            map_clinique:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d473956.8728165655!2d-3.6422272556785296!3d40.533701196142616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb996f2c2577194c9!2sProcreaTec%20International%20Fertility%20Clinic!5e0!3m2!1sfr!2sfr!4v1593076116887!5m2!1sfr!2sfr",
             name_practician:'Alyson',
             img_practician:'',
             speciality_practician:'dentist',
-            surgeries:['repair broken smile'],
+            operations:['repair broken smile'],
             description_clinic:'Welcome to Corazon del Mundo clinic. ',
             package:[''],
         },
@@ -23,7 +23,7 @@
             country:'Ivory Coast',
             continent:'Africa',
             img_clinique:'https://www.lasource.ch/sites/default/files/styles/crop_3_2/public/images/content_types/page/specialites.jpg?itok=1eShRFbt',
-            map_clinique:'',
+            map_clinique:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d473956.8728165655!2d-3.6422272556785296!3d40.533701196142616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb996f2c2577194c9!2sProcreaTec%20International%20Fertility%20Clinic!5e0!3m2!1sfr!2sfr!4v1593076116887!5m2!1sfr!2sfr",
             name_practician:'Alexandra',
             img_practician:'',
             speciality_practician:'dentist',
@@ -38,7 +38,7 @@
             country:'England',
             continent:'Europe',
             img_clinique:'https://www.lasource.ch/sites/default/files/styles/crop_3_2/public/images/content_types/page/specialites.jpg?itok=1eShRFbt',
-            map_clinique:'',
+            map_clinique:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d473956.8728165655!2d-3.6422272556785296!3d40.533701196142616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb996f2c2577194c9!2sProcreaTec%20International%20Fertility%20Clinic!5e0!3m2!1sfr!2sfr!4v1593076116887!5m2!1sfr!2sfr",
             name_practician:'Ismael',
             img_practician:'',
             speciality_practician:'Dental Surgery',
@@ -53,7 +53,7 @@
             country:'Thailand',
             continent:'Asia',
             img_clinique:'https://www.lasource.ch/sites/default/files/styles/crop_3_2/public/images/content_types/page/specialites.jpg?itok=1eShRFbt',
-            map_clinique:'',
+            map_clinique:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d473956.8728165655!2d-3.6422272556785296!3d40.533701196142616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb996f2c2577194c9!2sProcreaTec%20International%20Fertility%20Clinic!5e0!3m2!1sfr!2sfr!4v1593076116887!5m2!1sfr!2sfr",
             name_practician:'Guillaume',
             img_practician:'',
             speciality_practician:'Dental surgery',
@@ -68,7 +68,7 @@
             country:'Australia',
             continent:'Oceania',
             img_clinique:'https://www.lasource.ch/sites/default/files/styles/crop_3_2/public/images/content_types/page/specialites.jpg?itok=1eShRFbt',
-            map_clinique:'',
+            map_clinique:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d473956.8728165655!2d-3.6422272556785296!3d40.533701196142616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb996f2c2577194c9!2sProcreaTec%20International%20Fertility%20Clinic!5e0!3m2!1sfr!2sfr!4v1593076116887!5m2!1sfr!2sfr",
             name_practician:'Trad',
             img_practician:'',
             speciality_practician:'Dental surgery',
@@ -116,3 +116,13 @@
     
     
     )();
+
+    const openModal = (modalId) => {
+      document.getElementById("modalId");
+      modalId.style.display = "block";
+    }
+    
+    const closeModal = (modalId) => {
+      document.getElementById("modalId");
+      modalId.style.display = "none";
+    }

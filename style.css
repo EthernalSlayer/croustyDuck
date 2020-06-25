@@ -1,3 +1,12 @@
+/*RESET CSS*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
 header {
     background-color: blue;
     height: 20vh;
@@ -41,11 +50,37 @@ ul li:hover ul {
 
 .container {
     display:flex;
+    justify-content: space-between;
     width:75vw;
     height:30vh;
+    margin: 2%;
     border: 1px solid blue;
 }
 img{
     height:20vh;
     width:20vw;
+}
+
+.sectionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.clinicContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.modal {
+    display: none;
+    width: 80%;
+    margin-left: 20%;
+    background-color: blue;
 }
