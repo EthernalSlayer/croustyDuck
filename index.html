@@ -9,68 +9,72 @@
 <body>
     <header>
 
-    </header>
-    <aside id="menu">
-        <ul class="list">
-            <li><a>FILTER BY</a></li>
-            <li><a>Disponibilities </a>
-                <ul>
-                    <li><a>Next two weeks</a></li>
-                    <li><a>In the month</a></li>
-                    <li><a>Next 3 months</a></li>
-                    <li><a>Later</a></li>
-                </ul>
-            </li>
-            <li><a>Type of medical consultation</a>
-                <ul>
-                    <li><a>Implants</a></li>
-                    <li><a>Tooth-Whitening</a></li>
-                    <li><a>Dentistry</a></li>
-                </ul>
-            </li>
-            <li><a>Languages</a>
-            <ul>
-                <li><a>French</a></li>
-                <li><a>English</a></li>
-                <li><a>Spanish</a></li>
-                <li><a>Others</a></li>
-            </ul></li> 
-        </ul>
-    </aside>
+    </header>    
     <main>
         <section id='containPractician' class="sectionContainer">
             <div class="container">
                 <div class="clinicContainer">
-                    <h3>{clinic}</h3>
-                    <img src="{img_clinique}" alt="photo {clinic}" title="photo {clinic}">
+                    <img src="{img_clinique}" alt="photo {clinic}" class="imageClinic">
+                    <h4>{clinic}</h4>
                 </div>
                 <div class="infoContainer">
-                    <div> {continent} - {country} - {city} </div>
-                    <div>{name_practician}</div>
-                    <div>{speciality_practician}</div>
-                    <!--<div id="modal_{id}">-->
-                    <button type="button" class="openButton" onclick="openModal(modal_{id})"><div>Plus de détails... {clinic} </div></button>
+                    <div class="regionBlock">
+                        <p>{country}</p>
+                        <p>{city}</p>
+                    </div>
+                    <div class="practicianBlock">
+                        <p>{clinic}</p>
+                        <p>{operation}</p>
+                    </div>
+                    <!--<div id="modal_{id}"></div>-->
+                    <div>
+                        <button type="button" class="openButton" onclick="openModal(modal_{id})"><div>Plus de détails... {clinic} </div></button>
+                    </div>
                 </div>
             </div>
+            
 
             <br/>
             <div class="modal" id="modal_{id}">
-                <h3>{operations}</h3>
+                <h2>{operation}</h2>
                 <img src="{img_clinique}" alt="photo {clinic}">
                 <h4>{clinic}</h4>
                 <p>{description_clinic}</p>
-                <p>{continent}</p>
                 <p>{country}</p>
                 <p>{city}</p>
                 <iframe src="{map_clinique}" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                <h4>{name_practician}</h4>
-                <img src="{img_practician}" alt="practician photo">
-                <p>{speciality_practician}</p>
-                <p>{package}</p>
+                <p>{operation}</p>
+                <p>{disponibility}</p>
+                <p>{language}</p>
                 <button type="button" class="closeButton" onclick="closeModal(modal_{id})">close</button>
             </div>
         </section>
     </main>
+    <aside>
+        <div class="searchBar">
+            <input type="text" class="searchInput">
+        </div>
+        <div class="filters">
+            <h3>FILTERS</h3>
+            <ul>
+                <li>Disponibility</li>
+                <li>Health Care</li>
+                <li>Clinic</li>
+                <li>Languages</li>
+            </ul>
+        </div>
+        <div class="cityImage">
+            <img src="bucharest1.jpg" alt="" class="cityFont">
+            <img src="madrid1.jpg" alt="" class="cityFont">
+        </div>
+        <div class="browseDomain">
+            <h3>BROWSE DOMAINS</h3>
+            <img src="#" alt="">
+            <img src="#" alt="">
+            <img src="#" alt="">
+            <img src="#" alt="">
+        </div>
+    </aside>
     <footer>
 
 
