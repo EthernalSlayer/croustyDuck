@@ -43,25 +43,55 @@ h1{
     display: none;
 }
 
+.clinicContainer {
+    display: flex;
+    width: 50%;
+
+}
+
 .imageClinic {
-    width: 30%;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .container {
     display: flex;
-}
-
-.clinicContainer {
-    display: flex;
-    width: 50%;
+    border: 3px black solid;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 20px;
 }
 
 .infoContainer {
     display: flex;
-    justify-content: space-between;
-    width: 50%;
+    width: 40%;
+    flex-direction: column;
 }
 
+.infoContainer h4 {
+    font-size: 1.2em;
+}
+
+.countryBlock {
+    display: flex;
+    text-align: center;
+}
+
+.countryBlock p {
+    margin-right: 10px;
+}
+
+.buttonBlock {
+    display: flex;
+    width: min-content;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.buttonBlock button {
+    border-radius: 10px;
+}
 /*aside*/
 
 aside {

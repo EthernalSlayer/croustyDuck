@@ -4,7 +4,7 @@
    {
      id: 1,
      clinic: 'The Smiling House',
-     img_clinique:'https://www.lasource.ch/sites/default/files/styles/crop_3_2/public/images/content_types/page/specialites.jpg?itok=1eShRFbt',
+     img_clinique:'clinic01.jpg',
      city: 'Bucarest',
      country: 'Romania',
      price:[823,256],
@@ -17,7 +17,7 @@
  {
      id:2,
      clinic: 'Clinica del sol',
-     img_clinique:'https://www.lasource.ch/sites/default/files/styles/crop_3_2/public/images/content_types/page/specialites.jpg?itok=1eShRFbt',
+     img_clinique:'clinic02.jpg',
      city: 'Barcelona',
      country: 'Spain',
      price:[1995,999],
@@ -43,7 +43,7 @@
  {
      id:4,
      clinic: 'Helvetic Clinic',
-     img_clinique:'https://www.lasource.ch/sites/default/files/styles/crop_3_2/public/images/content_types/page/specialites.jpg?itok=1eShRFbt',
+     img_clinique:'clinic03.jpg',
      city: 'Budapest',
      country: 'Hungary',
      price:[268],
