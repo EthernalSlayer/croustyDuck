@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -12,7 +14,7 @@
     </header>    
     <main>
         <section id='containPractician' class="sectionContainer">
-            <div class="container">
+            <d class="container">
                 <div class="clinicContainer">
                     <img src="{img_clinique}" alt="photo {clinic}" class="imageClinic">
                 </div>
@@ -24,26 +26,35 @@
                     </div>
                     <p>{clinic}</p>
                     <p>{operation}</p>
-                </div>
-                <div class="buttonBlock">
-                    <button type="button" class="openButton" onclick="openModal(modal_{id})"><div>Plus de détails... {clinic} </div></button>
+                    <button type="button" class="openButton" onclick="openModal(modal_{id})"><div>discover</div></button>
                 </div>
             </div>
             
 
             <br/>
             <div class="modal" id="modal_{id}">
-                <h2>{operation}</h2>
-                <img src="{img_clinique}" alt="photo {clinic}">
-                <h4>{clinic}</h4>
-                <p>{description_clinic}</p>
-                <p>{country}</p>
-                <p>{city}</p>
-                <iframe src="{map_clinique}" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <div class="closeBlock">
+                    <!--<h2>{operation}</h2>-->
+                    <button type="button" class="closeButton" onclick="closeModal(modal_{id})">X</button>
+                </div>
+                <img src="modalImage.png">
+                <!--<div class="imgModal">
+                    <img src="{img_clinique}" alt="photo {clinic}" class="modalImage">
+                    <div class="clinicModal">
+                        <h4>{clinic}</h4>
+                        <p>{description_clinic}</p>
+                    </div>
+                </div>
+                <div class="mapModal">
+                    <div class="countryModal">
+                        <p>{country}</p>
+                        <p>{city}</p>
+                    </div>
+                    <iframe src="{map_clinique}" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
                 <p>{operation}</p>
                 <p>{disponibility}</p>
-                <p>{language}</p>
-                <button type="button" class="closeButton" onclick="closeModal(modal_{id})">close</button>
+                <p>{language}</p>-->
             </div>
         </section>
     </main>

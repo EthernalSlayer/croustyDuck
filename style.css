@@ -18,7 +18,7 @@ body {
 main {
     width: 50%;
     height: auto;
-    background-color: red;
+    background-color: lightgray;
 }
 
 
@@ -41,6 +41,55 @@ h1{
 
 .modal {
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 4%;
+    background-image: url("modalImage.jpg");
+    z-index: 10;
+}
+
+.closeBlock {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.closeButton {
+    font-weight: bold;
+    background-color: white;
+    height: fit-content;
+    border: none;
+}
+
+.modalImage {
+    width: 40%;
+}
+
+.imgModal {
+    display: flex;
+}
+
+.clinicModal {
+    display: flex;
+    flex-direction: column;
+}
+
+.mapModal{
+    display: flex;
+}
+
+.countryModal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.countryModal p {
+    font-size: 1.5em;
 }
 
 .clinicContainer {
@@ -57,14 +106,18 @@ h1{
 
 .container {
     display: flex;
-    border: 3px black solid;
+    background-color: white;
+    box-shadow: 10px 10px 5px gray;
     width: 90%;
     margin-left: 5%;
+    margin-bottom: 5%;
     border-radius: 20px;
 }
 
 .infoContainer {
     display: flex;
+    margin-left: 5%;
+    margin-bottom: 3%;
     width: 40%;
     flex-direction: column;
 }
@@ -82,16 +135,21 @@ h1{
     margin-right: 10px;
 }
 
-.buttonBlock {
+/*.buttonBlock {
     display: flex;
     width: min-content;
     align-items: flex-end;
     justify-content: flex-end;
-}
+}*/
 
 .buttonBlock button {
     border-radius: 10px;
 }
+
+#containPractician {
+    margin-top: 2%;
+}
+
 /*aside*/
 
 aside {
