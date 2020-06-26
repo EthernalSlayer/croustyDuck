@@ -285,10 +285,19 @@ checkboxT.addEventListener( 'change', function() {
 
 
 
-
-function displayToothWhitening(){
-    displayOperation('tooth whitening');
+function searchTag(){
+    let inputTag = document.getElementById('searchInput').value;
+    for (let i=0; i<dataClinics.length; i++){
+        if (dataClinics[i].includes('inputTag')){
+            document.getElementById('searchResult').innerHTML = `<li>${clinic}</li>`;
+        }
+        else {
+            document.getElementById('searchResult').innerHTML = `<li>${inputTag} not Find</li>`
+        }
+    }
 }
+
+searchTag()
 
 
 
