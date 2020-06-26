@@ -111,7 +111,7 @@ ul {
 
 ul li {
     margin: 2%;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .cityFont {
@@ -161,15 +161,22 @@ ul li ul {
 ul li:hover ul {
     display: block;
     position: absolute;
-    background-color: lightgrey;
+    background-color: #fff;
+    opacity:0.8;
     font-size:0.8em;
-    top:50px;
+    top:55px;
     margin-left:-20px;
+    border-radius:20px;
 } 
 
 ul li:hover{
     color:#0596de;
 }
+
+ul li ul li:hover {
+    color: #000;
+}
+
 
 label {
     font-size:0.8em;
@@ -178,4 +185,19 @@ label {
 ul li ul:first-of-type:hover{
     list-style: none;
     color:#0596de;
+}
+
+.searchResult{
+    display:flex;
+    margin-left:2%;
+    margin-right:2%;
+}
+
+.searchResult img{
+width:100%;
+border-radius:20px;
+}
+
+.searchResult li {
+    list-style: none;
 }
