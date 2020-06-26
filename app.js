@@ -12,7 +12,7 @@
      map_clinique:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d473956.8728165655!2d-3.6422272556785296!3d40.533701196142616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb996f2c2577194c9!2sProcreaTec%20International%20Fertility%20Clinic!5e0!3m2!1sfr!2sfr!4v1593076116887!5m2!1sfr!2sfr",
      description_clinic:'Welcome to The Smiling House. ',
      disponibility:['Mai', 'September','February', 'March', 'April', 'October'],
-     Language : 'English',
+     Language : ['English','Romanian','French',]
  },
  {
      id:2,
@@ -25,7 +25,7 @@
      map_clinique:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d473956.8728165655!2d-3.6422272556785296!3d40.533701196142616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb996f2c2577194c9!2sProcreaTec%20International%20Fertility%20Clinic!5e0!3m2!1sfr!2sfr!4v1593076116887!5m2!1sfr!2sfr",
      description_clinic:'Welcome to Clinic del Sol. ',
      disponibility:['March', 'April', 'October', 'November', 'December'],
-     Language : 'English',
+     Language : ['English','Spanish','French',]
  },
  {
      id:3,
@@ -38,7 +38,7 @@
      map_clinique:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d473956.8728165655!2d-3.6422272556785296!3d40.533701196142616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb996f2c2577194c9!2sProcreaTec%20International%20Fertility%20Clinic!5e0!3m2!1sfr!2sfr!4v1593076116887!5m2!1sfr!2sfr",
      description_clinic:'Welcome to Corazon del Mundo clinic. ',
      disponibility:['June', 'July', 'August', 'September'],
-     Language : 'English',
+     Language : ['English',]
  },
  {
      id:4,
@@ -51,7 +51,7 @@
      map_clinique:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d473956.8728165655!2d-3.6422272556785296!3d40.533701196142616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb996f2c2577194c9!2sProcreaTec%20International%20Fertility%20Clinic!5e0!3m2!1sfr!2sfr!4v1593076116887!5m2!1sfr!2sfr",
      description_clinic:'Welcome to Helevtic Clinic. ',
      disponibility:['August', 'September','June', 'January','March'],
-     Language : 'English',
+     Language : ['Hungarian','French',]
  },
  {
      id:5,
@@ -64,7 +64,7 @@
      map_clinique:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d473956.8728165655!2d-3.6422272556785296!3d40.533701196142616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb996f2c2577194c9!2sProcreaTec%20International%20Fertility%20Clinic!5e0!3m2!1sfr!2sfr!4v1593076116887!5m2!1sfr!2sfr",
      description_clinic:'Welcome to Teeth Clinic. ', 
      disponibility:[ 'April', 'October', 'November'],
-     Language : 'English',
+     Language : ['English','Hungarian','French',]
    },
  ];
 
@@ -220,12 +220,12 @@ function dispoMonth(month)
         dispoMonth('December');
     }
 
-    let tmpData = [];
+
+    let tmpData = [''];
 function displayOperation(name){
     for (let i = 0; i < dataClinics.length; i++) {
         if (dataClinics[i].operation.includes(name)) {
-            tmpData.push(`<li><img src="${dataClinics[i].img_clinique}" alt="${dataClinics[i].clinic}"/>Clinique ${dataClinics[i].clinic} - ${dataClinics[i].operation}</li>`);
-            
+            tmpData.push(`<li><img src="${dataClinics[i].img_clinique}" alt="${dataClinics[i].clinic}"/>Clinique ${dataClinics[i].clinic} <br/> ${dataClinics[i].operation}</li>`);         
         } 
     }
     
@@ -236,15 +236,61 @@ function displayImplant(){
     document.getElementById('searchResult').innerHTML = tmpData;
 }
 
-document.getElementById('implants').addEventListener('change',displayImplant())
+// document.getElementById('implants').addEventListener('CheckboxStateChange',displayImplant(),resetDisplay())
 
-function displayDentistry(){
-    displayOperation("dentistry");
-}
+const checkboxI = document.querySelector("input[name=implants]");
+
+checkboxI.addEventListener( 'change', function() {
+    if(this.checked) {
+        // Checkbox is checked..
+        displayOperation("implant");
+        document.getElementById('searchResult').innerHTML = tmpData;
+    } else {
+        // Checkbox is not checked..
+        tmpData = [''];
+        document.getElementById('searchResult').innerHTML = tmpData;
+    }
+});
+
+const checkboxD = document.querySelector("input[name=dentistry]");
+
+checkboxD.addEventListener( 'change', function() {
+    if(this.checked) {
+        // Checkbox is checked..
+        displayOperation("dentistry");
+        document.getElementById('searchResult').innerHTML = tmpData;
+    } else {
+        // Checkbox is not checked..
+        tmpData = [''];
+        document.getElementById('searchResult').innerHTML = tmpData;
+    }
+});
+
+
+const checkboxT = document.querySelector("input[name=toothWhitening]");
+
+checkboxT.addEventListener( 'change', function() {
+    if(this.checked) {
+        // Checkbox is checked..
+        displayOperation("tooth whitening");
+        document.getElementById('searchResult').innerHTML = tmpData;
+    } else {
+        // Checkbox is not checked..
+        tmpData = [''];
+        document.getElementById('searchResult').innerHTML = tmpData;
+    }
+});
+
+
+
+
+
 
 function displayToothWhitening(){
     displayOperation('tooth whitening');
 }
+
+
 
 
 } // Fin fonction
