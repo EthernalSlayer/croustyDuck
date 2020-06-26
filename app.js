@@ -187,24 +187,38 @@ function testHigh(season) {
    }
 }
 
+function dispoMonth(month)
+{
+    for(let i=0;i<hotel.length;i++)
+    {
+        for(let j=0;j<clinic.length; j++)
+        {   let place1 =hotel[i].disponibility.indexOf(month);
+            let place2 =clinic[j].disponibility.indexOf(month);
 
-function dispo(a,b,month)
-   {
-           for(let k=0; k<hotel[a].disponibility.length; k++)
-               {
-                   for(let l=0; l<clinic[b].disponibility.length; l++)
-                   {
-                       if(hotel[a].disponibility[k]===clinic[b].disponibility[l])
-                       {
-                           console.log(hotel[a].disponibility[k]);
-                       }
-                   }
-               }
-   }
+                    if(place1!==-1 && place2!==-1){
+                        
+                    if(hotel[i].disponibility[place1]===clinic[j].disponibility[place2]&& hotel[i].city===clinic[j].city)
+                    {
+                        console.log(`The hotel ${hotel[i].name} and the clinic ${clinic[j].name} are available for this period ${hotel[i].disponibility[place1]}`);
+                    }
 
+                }}
+            }
+        }
 
-
-
+    function dispoThreeMonth()
+        {
+            dispoMonth('July');
+            dispoMonth('August');
+            dispoMonth('September');
+        }
+    
+    function dispoOther()
+    {
+        dispoMonth('October');
+        dispoMonth('November');
+        dispoMonth('December');
+    }
 
 
 
