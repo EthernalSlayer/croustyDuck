@@ -15,21 +15,18 @@
             <div class="container">
                 <div class="clinicContainer">
                     <img src="{img_clinique}" alt="photo {clinic}" class="imageClinic">
-                    <h4>{clinic}</h4>
                 </div>
                 <div class="infoContainer">
-                    <div class="regionBlock">
+                    <h4>{clinic}</h4>
+                    <div class="countryBlock">
                         <p>{country}</p>
                         <p>{city}</p>
                     </div>
-                    <div class="practicianBlock">
-                        <p>{clinic}</p>
-                        <p>{operation}</p>
-                    </div>
-                    <!--<div id="modal_{id}"></div>-->
-                    <div>
-                        <button type="button" class="openButton" onclick="openModal(modal_{id})"><div>Plus de détails... {clinic} </div></button>
-                    </div>
+                    <p>{clinic}</p>
+                    <p>{operation}</p>
+                </div>
+                <div class="buttonBlock">
+                    <button type="button" class="openButton" onclick="openModal(modal_{id})"><div>Plus de détails... {clinic} </div></button>
                 </div>
             </div>
             
