@@ -151,6 +151,11 @@ let hotel = [{
 ]
 
 
+
+
+
+
+
 function dispo(a,b,month)
  {
          for(let k=0; k<hotel[a].disponibility.length; k++)
@@ -231,12 +236,6 @@ function displayOperation(name){
     
 }
 
-function displayImplant(){
-    displayOperation("implant");
-    document.getElementById('searchResult').innerHTML = tmpData;
-}
-
-// document.getElementById('implants').addEventListener('CheckboxStateChange',displayImplant(),resetDisplay())
 
 const checkboxI = document.querySelector("input[name=implants]");
 
@@ -285,20 +284,19 @@ checkboxT.addEventListener( 'change', function() {
 
 
 
-function searchTag(){
-    let inputTag = document.getElementById('searchInput').value;
-    for (let i=0; i<dataClinics.length; i++){
-        if (dataClinics[i].includes('inputTag')){
-            document.getElementById('searchResult').innerHTML = `<li>${clinic}</li>`;
-        }
-        else {
-            document.getElementById('searchResult').innerHTML = `<li>${inputTag} not Find</li>`
-        }
-    }
-}
+// function searchTag(){
+//     let inputTag = document.getElementById('searchInput').value;
+//     for (let i=0; i<dataClinics.length; i++){
+//         if (dataClinics[i].includes('inputTag')){
+//             document.getElementById('searchResult').innerHTML = `<li>${clinic}</li>`;
+//         }
+//         else {
+//             document.getElementById('searchResult').innerHTML = `<li>${inputTag} not Find</li>`
+//         }
+//     }
+// }
 
-searchTag()
-
+// searchTag()
 
 
 
@@ -307,12 +305,12 @@ searchTag()
 
  // Modal //
 
- const openModal = (modalId) => {
-   document.getElementById("modalId");
-   modalId.style.display = "block";
- }
- 
- const closeModal = (modalId) => {
-   document.getElementById("modalId");
-   modalId.style.display = "none";
- }
+const openModal = (modalId) => {
+    document.getElementById("modalId");
+    modalId.style.display = "block";
+  };
+  
+  const closeModal = (modalId) => {
+    document.getElementById("modalId");
+    modalId.style.display = "none";
+  };
