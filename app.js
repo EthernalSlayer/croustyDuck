@@ -21,7 +21,7 @@
      city: 'Barcelona',
      country: 'Spain',
      price:[1995,999],
-     operation: ['implant','dental braces'],
+     operation: ['implant','dental braces','dentistry'],
      map_clinique:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d473956.8728165655!2d-3.6422272556785296!3d40.533701196142616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb996f2c2577194c9!2sProcreaTec%20International%20Fertility%20Clinic!5e0!3m2!1sfr!2sfr!4v1593076116887!5m2!1sfr!2sfr",
      description_clinic:'Welcome to Clinic del Sol. ',
      disponibility:['March', 'April', 'October', 'November', 'December'],
@@ -47,7 +47,7 @@
      city: 'Budapest',
      country: 'Hungary',
      price:[268],
-     operation: ['tooth whitening'],
+     operation: ['tooth whitening','implant'],
      map_clinique:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d473956.8728165655!2d-3.6422272556785296!3d40.533701196142616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb996f2c2577194c9!2sProcreaTec%20International%20Fertility%20Clinic!5e0!3m2!1sfr!2sfr!4v1593076116887!5m2!1sfr!2sfr",
      description_clinic:'Welcome to Helevtic Clinic. ',
      disponibility:['August', 'September','June', 'January','March'],
@@ -220,10 +220,31 @@ function dispoMonth(month)
         dispoMonth('December');
     }
 
+    let tmpData = [];
+function displayOperation(name){
+    for (let i = 0; i < dataClinics.length; i++) {
+        if (dataClinics[i].operation.includes(name)) {
+            tmpData.push(`<li><img src="${dataClinics[i].img_clinique}" alt="${dataClinics[i].clinic}"/>Clinique ${dataClinics[i].clinic} - ${dataClinics[i].operation}</li>`);
+            
+        } 
+    }
+    
+}
 
+function displayImplant(){
+    displayOperation("implant");
+    document.getElementById('searchResult').innerHTML = tmpData;
+}
 
+document.getElementById('implants').addEventListener('change',displayImplant())
 
+function displayDentistry(){
+    displayOperation("dentistry");
+}
 
+function displayToothWhitening(){
+    displayOperation('tooth whitening');
+}
 
 
 } // Fin fonction

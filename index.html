@@ -51,18 +51,55 @@
         </section>
     </main>
     <aside>
+        <h1>DOCTOTRIP.io</h1>
+        <span class="byDocto">By  <img src="https://hellobiz.fr/wp-content/uploads/2018/01/Logo-Doctolib.png" alt="logo-doctolib"></span>
         <div class="searchBar">
-            <input type="text" class="searchInput">
+            <input type="text" class="searchInput" placeholder="Where do you want to go ?" >
+            <input type="submit" value="Find" id="submitSearch" class="submitSearch">
         </div>
+
+
         <div class="filters">
-            <h3>FILTERS</h3>
-            <ul>
-                <li>Disponibility</li>
-                <li>Health Care</li>
-                <li>Clinic</li>
-                <li>Languages</li>
+           <ul class="list">
+                <li><a>FILTER BY</a></li>
+                <li><a>Disponibilities </a>
+                    <ul>
+                        <li><input type="checkbox" id="inThisMonth" name="inThisMonth">
+                        <label for="inThisMonth">In this month</label></li>
+                        <li><input type="checkbox" id="next3months" name="next3months">
+                        <label for="next3months">Next 3 months</label></li>
+                        <li><input type="checkbox" id="later" name="later">
+                        <label for="later">Later</label></li>
+                    </ul>
+                </li>
+                <li><a>Type of medical consultation</a>
+                    <ul>
+                        <li><input type="checkbox" id="implants" name="implants" onclick="displayImplant">
+                            <label for="implants">Implants</label></li>
+                        <li><input type="checkbox" id="toothWhitening" name="toothWhitening">
+                            <label for="toothWhitening">Tooth-Whitening</label></li>
+                        <li><input type="checkbox" id="dentistry" name="dentistry">
+                            <label for="dentistry">Dentistry</label></li>
+                    </ul>
+                </li>
+                <li><a>Languages</a>
+                <ul>
+                    <li><input type="checkbox" id="french" name="french">
+                        <label for="french">French</label></li>
+                    <li><input type="checkbox" id="english" name="english">
+                        <label for="english">English</label></li>
+                    <li><input type="checkbox" id="spanish" name="spanish">
+                        <label for="spanish">Spanish</label></li>
+                    <li><input type="checkbox" id="other" name="other">
+                        <label for="other">Other</label></li>
+                </ul></li> 
             </ul>
         </div>
+
+        <div id="searchResult">
+            
+        </div>
+
         <div class="cityImage">
             <img src="bucharest1.jpg" alt="" class="cityFont">
             <img src="madrid1.jpg" alt="" class="cityFont">
